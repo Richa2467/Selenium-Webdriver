@@ -36,6 +36,7 @@ public class JavaScriptExecutorDemo {
         js.executeScript("arguments[0].setAttribute('value', 'Ram')",inputbox);
         
         
+        //clicking on the element - alternate for click()
         WebElement chechbox=driver.findElement(By.xpath("//input[@value='Male']"));
         
         js.executeScript("arguments[0].click()", chechbox);
