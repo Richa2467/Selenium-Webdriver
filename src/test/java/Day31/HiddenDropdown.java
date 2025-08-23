@@ -43,6 +43,7 @@ public class HiddenDropdown {
 		            System.out.println("Login successful!");
 
 		            
+<<<<<<< HEAD
 		          //clicking on PIM
 		    		driver.findElement(By.xpath("//span[normalize-space()='PIM']")).click();//clicking on PIM
 		    		
@@ -68,9 +69,24 @@ public class HiddenDropdown {
 		    		
 		    
 		    		}
+=======
+		            WebElement pimMenu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='PIM']")));
+		            pimMenu.click();
+		            
+		            WebElement dropdownIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//i[contains(@class,'bi-caret-down-fill')]")));
+		            dropdownIcon.click();
+
+		            // Wait until the options list is visible
+		            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']")));
+
+>>>>>>> fb9a66625262aee513df7d4b064b0de22fb0219a
 		    		
 
 		           
 		
 
 	}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> fb9a66625262aee513df7d4b064b0de22fb0219a
