@@ -43,19 +43,41 @@ public class HiddenDropdown {
 		            System.out.println("Login successful!");
 
 		            
-		            WebElement pimMenu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='PIM']")));
-		            pimMenu.click();
-		            
-		            WebElement dropdownIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//i[contains(@class,'bi-caret-down-fill')]")));
-		            dropdownIcon.click();
 
-		            // Wait until the options list is visible
-		            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']")));
+		          //clicking on PIM
+		    		driver.findElement(By.xpath("//span[normalize-space()='PIM']")).click();//clicking on PIM
+		    		
+		    		
+		    		//clicking on dropdown
+		    		driver.findElement(By.xpath("//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[2]/i")).click();
+		    		 Thread.sleep(5000);
+		    				//clicking on single option
+//		    				driver.findElement(By.xpath("//span[normalize-space()='Financial Analyst']")).click();
+		    				
+		    		//count number of options
+		    				List<WebElement> doptions=driver.findElements(By.xpath("//div[@role='listbox']//span"));
+		    				System.out.println(doptions.size());
+		    				
+		    				//printing options in the console window
+		    				
+		    				for(WebElement dp:doptions)
+		    				{
+		    					System.out.println(dp.getText());
+		    				}
 
 		    		
+		    		
+		    
+		    		}
 
-		           
-		
+//		            WebElement pimMenu = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='PIM']")));
+//		            pimMenu.click();
+//		            
+//		            WebElement dropdownIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//i[contains(@class,'bi-caret-down-fill')]")));
+//		            dropdownIcon.click();
+//
+//		            // Wait until the options list is visible
+//		            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='listbox']")));
 
-	}
 }
+

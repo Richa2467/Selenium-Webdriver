@@ -68,4 +68,8 @@ public class FrameDemo {
 		
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fb9a66625262aee513df7d4b064b0de22fb0219a
