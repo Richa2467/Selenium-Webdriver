@@ -5,6 +5,8 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,13 +27,21 @@ public class ParamTest {
 	@Test(priority=1)
 	void testlogo()
 	{
-		boolean status=driver.findElement(By.xpath("//img[@alt='company-branding']")).isDisplayed();
-		Assert.assertEquals(status, true);
+//		boolean status=driver.findElement(By.xpath("//img[@alt='company-branding']")).isDisplayed();
+		
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    boolean status = wait
+		        .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='company-branding']")))
+		        .isDisplayed();
+		    
+		    Assert.assertEquals(status, true);
+		
 	}
 	
 	@Test(priority=2)
 	void testTitle()
 	{
+		System.out.println(driver.getTitle());
 		Assert.assertEquals(driver.getTitle(),"OrangeHRM");
 		
 	}
