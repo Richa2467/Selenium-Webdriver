@@ -31,7 +31,7 @@ public class HardvsSoftAssertions {
 		System.out.println("testing");
 		System.out.println("testing");
 		
-		sa.assertAll();
+		sa.assertAll();           //mandatory
 	}
 
 }
