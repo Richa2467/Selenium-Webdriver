@@ -1,12 +1,9 @@
 package Day28;
-
-<<<<<<< HEAD
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-=======
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +12,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
->>>>>>> fb9a66625262aee513df7d4b064b0de22fb0219a
+
 
 public class NavigationalCommmands {
 
