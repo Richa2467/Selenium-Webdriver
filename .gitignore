@@ -1,2 +1,6 @@
 /target/
+<<<<<<< HEAD
 test-output/
+=======
+target/
+>>>>>>> c87f556 (Stop tracking target/ directory and ignore it)
