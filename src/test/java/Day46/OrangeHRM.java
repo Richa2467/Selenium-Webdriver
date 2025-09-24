@@ -1,5 +1,10 @@
 package Day46;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
+import org.testng.AssertJUnit;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -12,6 +17,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+
+@Listeners(Day46.Mylistner.class)
 public class OrangeHRM {
 	
 	WebDriver driver;
@@ -35,7 +42,7 @@ public class OrangeHRM {
 		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    boolean status = driver.findElement(By.xpath("//img[@alt='company-branding']")).isDisplayed();
 		    
-		    Assert.assertEquals(status, true);
+		    AssertJUnit.assertEquals(status, true);
 		
 	}
 	
@@ -43,14 +50,14 @@ public class OrangeHRM {
 	void testTitle()
 	{
 		System.out.println(driver.getTitle());
-		Assert.assertEquals(driver.getTitle(),"OrangeHRM");
+		AssertJUnit.assertEquals(driver.getTitle(),"OrangeHRM");
 		
 	}
 	
 	@Test(priority=2)
 	void testURL()
 	{
-		Assert.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehr");
+		AssertJUnit.assertEquals(driver.getCurrentUrl(),"https://opensource-demo.orangehr");
 	}
 	
 	@AfterClass
